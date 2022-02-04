@@ -16,6 +16,7 @@
   font-size: 50px;
   font-family: "Poppins ExtraBold";
   color: var(--white);
+  margin-right: 50%;
 }
 .header-options {
   display: flex;
@@ -35,7 +36,7 @@
   color: var(--white);
 }
 .selected-header-option {
-  color: var(--dark-orange);
+  color: greenyellow;
 }
 
 /* IPAD PRO RESPONSIVENESS */
