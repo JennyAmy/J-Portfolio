@@ -69,7 +69,7 @@ export default function Profile() {
                 {" "}
                 Contact Me{" "}
             </button>
-            <a href='ehizcv.pdf' download="Jennifer OliseyenumCV.pdf">
+            <a href='01Jennifer_Oliseyenum_CV.pdf' download="Jennifer OliseyenumCV.pdf">
                 <button className="btn highlighted-btn">Get Résumé</button></a>
           </div>
         </div>

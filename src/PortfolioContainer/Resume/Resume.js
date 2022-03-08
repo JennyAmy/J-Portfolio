@@ -39,24 +39,35 @@ export default function Resume(props) {
     };
 
     const resumeBullets = [
-        {label: "Education", logoSrc: "education.svg"},
         {label: "Work History", logoSrc: "work-history.svg"},
         {label: "Programming Skills", logoSrc: "programming-skills.svg"},
+        {label: "Education", logoSrc: "education.svg"},
         {label: "Projects", logoSrc: "projects.svg"},
         {label: "Interests", logoSrc: "interests.svg"},
     ];
 
     const programmingSkillsDetails = [
-        {skill: "DotNET Core", ratingPercentage: 75},
-        {skill: "Angular", ratingPercentage: 75},
-        {skill: "Typescript", ratingPercentage: 70},
-        {skill: "Javascript", ratingPercentage: 70},
-        {skill: "MSSQL", ratingPercentage: 75},
-        {skill: "React", ratingPercentage: 65},
-        {skill: "HTML", ratingPercentage: 80},
-        {skill: "CSS", ratingPercentage: 65},
-        {skill: "Javascript", ratingPercentage: 70},
+        {skill: "DotNET Core"},
+        {skill: "Angular"},
+        {skill: "Typescript"},
+        {skill: "Javascript"},
+        {skill: "MSSQL"},
+        {skill: "React"},
+        {skill: "HTML"},
+        {skill: "CSS"},
+        {skill: "Javascript"},
     ];
+    // const programmingSkillsDetails = [ ///Has progress bar
+    //     {skill: "DotNET Core", ratingPercentage: 75},
+    //     {skill: "Angular", ratingPercentage: 75},
+    //     {skill: "Typescript", ratingPercentage: 70},
+    //     {skill: "Javascript", ratingPercentage: 70},
+    //     {skill: "MSSQL", ratingPercentage: 75},
+    //     {skill: "React", ratingPercentage: 65},
+    //     {skill: "HTML", ratingPercentage: 80},
+    //     {skill: "CSS", ratingPercentage: 65},
+    //     {skill: "Javascript", ratingPercentage: 70},
+    // ];
 
     const projectsDetails= [
         {
@@ -86,33 +97,6 @@ export default function Resume(props) {
     ]
 
     const resumeDetails = [
-        <div className='resume-screen-container' key="education">
-            <ResumeHeading
-            heading={"Delta State University, Abraka"}
-            subHeading={"BACHELOR OF ARTS AND EDUCATION, ENGLISH"}
-            fromDate={"2015"}
-            toDate={"2018"}
-            />
-            <ResumeHeading
-            heading={"National Youth Service Corps"}
-            subHeading={"Cashier at Momoreoluwa Nigeria Ltd"}
-            fromDate={"2019"}
-            toDate={"2020"}
-            />
-            <ResumeHeading
-            heading={"Delta State University, Abraka"}
-            subHeading={"DIPLOMA IN LAW"}
-            fromDate={"2013"}
-            toDate={"2015"}
-            />
-            <ResumeHeading
-            heading={"Federal Government College, Idoani"}
-            subHeading={"WAEC and NECO"}
-            fromDate={"2007"}
-            toDate={"2013"}
-            />
-        </div>,
-
         <div className='resume-screen-container' key="work-experience">
             <div className="experience-container">
                 <ResumeHeading
@@ -151,14 +135,40 @@ export default function Resume(props) {
                     <div className='skill-parent' key={index}>
                         <div className='heading-bullet'></div>
                         <span>{skill.skill}</span>
-                        <div className='skill-percentage'>
+                        {/* <div className='skill-percentage'>
                             <div style={{width: skill.ratingPercentage + "%"}}
                             className='active-percentage-bar'>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 ))}
             </div>,
+                    <div className='resume-screen-container' key="education">
+                    <ResumeHeading
+                    heading={"Delta State University, Abraka"}
+                    subHeading={"BACHELOR OF ARTS AND EDUCATION, ENGLISH"}
+                    fromDate={"2015"}
+                    toDate={"2018"}
+                    />
+                    {/* <ResumeHeading
+                    heading={"National Youth Service Corps"}
+                    subHeading={"Cashier at Momoreoluwa Nigeria Ltd"}
+                    fromDate={"2019"}
+                    toDate={"2020"}
+                    /> */}
+                    <ResumeHeading
+                    heading={"Delta State University, Abraka"}
+                    subHeading={"DIPLOMA IN LAW"}
+                    fromDate={"2013"}
+                    toDate={"2015"}
+                    />
+                    <ResumeHeading
+                    heading={"Federal Government College, Idoani"}
+                    subHeading={"WAEC and NECO"}
+                    fromDate={"2007"}
+                    toDate={"2013"}
+                    />
+                </div>,
 
             <div className='resume-screen-container' key="projects">
                 {projectsDetails.map((projectsDetails, index) =>(
@@ -172,13 +182,17 @@ export default function Resume(props) {
                     />
                 ))}
             </div>,
+            
 
             <div  className='resume-screen-container' key="interests">
                 <ResumeHeading
                     heading="Reading"
                 />
                 <ResumeHeading
-                    heading="Chess and Scrabble games"
+                    heading="Chess"
+                />
+                  <ResumeHeading
+                    heading="Scrabble"
                 />
                 <ResumeHeading
                     heading="Coding"
